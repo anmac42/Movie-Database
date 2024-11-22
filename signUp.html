@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+
+<!-- Author : Gina Philipose
+HTML File : signUp.html
+Last Update : November 20th, 2024 -->
+
+
+<!-- Alyssa has this component -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie Database</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <img src="logo.jpg" width="110" height="100">
+        <div class="buttons">
+        <a href="https://css1.seattleu.edu/~gphilipose/template.html"><button><h3>Template</h3></button></a>
+        <a href="signUp.html"><button><h3>Sign Up</h3></button></a>
+        <a href="index.html"><button><h3>Movies</h3></button></a>
+        <a href="login.html"><button><h3>Login</h3></button></a>
+        </div>
+    </div> 
+    <br>
+
+
+    <div class="sign">
+
+        <form action="sign.php">
+            <label for="fname"><h3>First name:</h3></label>
+            <input type="text" id="fname" name="fname"> <br> <br>
+            <label for="lname"><h3>Last name:</h3></label>
+            <input type="text" id="lname" name="lname"> <br> <br>
+            <label for="email"><h3>Email:</h3></label>
+            <input type="text" id="email" name="email"> <br> <br>
+            <label for="userTag"><h3>Username:</h3></label>
+            <input type="text" id="userTag" name="userTag">
+        </form>
+        
+
+    </div>
+
+    <br>
+    - sign in stores user stuff into the user table (add a password attribute to check for login)
+    <br>
+    - login will lead to a login page which checks with the user table to see if the user exits
+    and if the password matches with the user - give corresponding error messages
+    <br>
+    - after logging in, store the userID in local storage so the user is allowed to make reviews 
+    under their corresponding name
+    <br>
+    - block review making if the user is not logged in (userID in local storage is empty or NULL)
+    <br>
+    - maybe when logged in, add a recommended movies carousel at top with movies of similar genres
+    to what the user had recently reviewed (user review table to check this)
+    <br>
+    - when logged in, an already reviewed movies carousel
+    <br>
+    - when logged in, an not-yet reviewed movies carousel
+    <br> 
+    - Possibly change all the ID's to auto increment whenever we add it
+    (especially for userID - whenever a user account is created)
+    <br>
+    - do we need to use locking for this project?
+      - lock when user account is being added to user
+
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
