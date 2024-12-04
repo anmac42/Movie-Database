@@ -1,21 +1,21 @@
-/* Global styles */
-* {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+*
+{
+    font-family: Arial, Helvetica, sans-serif; 
 }
+ 
 
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
-    background-color: #505d6f;
+    background-color: #505d6f; /* Matches your theme */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures body fills the viewport */
+    box-sizing: border-box; /* Prevents padding/margins from affecting layout */
 }
 
+/* Header Styles */
 .header {
     display: flex;
     align-items: center;
@@ -23,19 +23,27 @@ body {
     background-color: #293443;
     padding: 10px 20px;
     color: #c9d5e1;
+    width: 100%; /* Full width of the page */
+    box-sizing: border-box;
+    position: fixed; /* Sticks header to the top */
+    top: 0; /* Position at the very top */
+    z-index: 10; /* Ensure it stays above other elements */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional for aesthetics */
+    font-weight: bold;
 }
+
 
 .header img {
     height: 100px;
-    width: 110px;
+    width: auto;
 }
 
 .buttons {
     display: flex;
-    gap: 10px;
+    gap: 10px; /* Space between buttons */
 }
 
-.button-link {
+.button-link, .buttons a {
     display: inline-block;
     background-color: #293443;
     color: #c9d5e1;
@@ -43,22 +51,27 @@ body {
     padding: 10px 20px;
     border-radius: 4px;
     text-decoration: none;
+    border: none;
+    cursor: pointer;
 }
 
-.button-link:hover {
-    opacity: 0.8;
+.button-link:hover, .buttons a:hover {
+    opacity: 0.8; /* Slight fade effect on hover */
 }
 
 .header form {
     margin-left: auto;
     display: flex;
     align-items: center;
+    gap: 10px; /* Adds spacing between label and input */
 }
 
 .header input {
     padding: 5px;
     border: 1px solid #c9d5e1;
     border-radius: 4px;
+    background-color: #f4f4f4;
+    color: #293443;
 }
 
 /* Login Form Styles */
@@ -69,18 +82,34 @@ body {
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
-    margin-top: 20px;
+    margin: 200px auto 20px auto; /* Increase margin-top to 140px for more space */
+    box-sizing: border-box;
 }
 
-input {
+
+.login-container h1 {
+    margin-bottom: 20px;
+    color: #293443;
+}
+
+.login-container label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #505d6f;
+}
+
+.login-container input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
     border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #505d6f;
 }
 
-button {
+.login-container button {
     width: 100%;
     padding: 10px;
     background: #007BFF;
@@ -88,29 +117,44 @@ button {
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    font-size: 16px;
 }
 
-.button-link {
-    display: inline-block;
-    background-color: #293443;
-    color: #c9d5e1;
-    text-align: center;
-    padding: 10px 20px;
-    border-radius: 4px;
-    text-decoration: none;
+.login-container button:hover {
+    background: #0056b3;
 }
 
-.button-link:hover {
-    opacity: 0.8;
+.login-container p {
+    margin-top: 10px;
+    color: #505d6f;
 }
 
-
-/* Link styles */
-a {
+.login-container p a {
     color: #007BFF;
     text-decoration: none;
 }
 
-a:hover {
+.login-container p a:hover {
     text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap; /* Allows header to adjust for smaller screens */
+        text-align: center;
+    }
+
+    .header img {
+        height: 80px;
+    }
+
+    .buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .login-container {
+        width: 90%; /* Adjusts form width for smaller screens */
+    }
 }
