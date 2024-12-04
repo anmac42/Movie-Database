@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+</head>
+<body>
+    <div class="header">
+        <img src="logo.jpg" alt="Site Logo">
+        <div class="buttons">
+            <a href="https://css1.seattleu.edu/~gphilipose/template.html" class="button-link">Template</a>
+            <a href="signUp.html" class="button-link">Sign Up</a>
+            <a href="index.html" class="button-link">Movies</a>
+            <a href="login.html" class="button-link">Login</a>
+        </div>
+        <form action="search.html">
+            <label for="fname"><b>Search Movies:&nbsp;</b></label>
+            <input type="text" id="fname" name="fname">
+        </form>
+    </div> 
+    
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="signUp.html">Sign Up</a></p>
+        <p id="error-message" style="color: red;"></p>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
