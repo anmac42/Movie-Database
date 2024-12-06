@@ -66,6 +66,7 @@
 
 
 .sign h3, .sign form, .sign input{ 
+    color: #293443; 
     border: 1px solid #293443;
     padding: 10px;
     color: #c9d5e1;
@@ -89,6 +90,7 @@
 }
 
 .sign input {
+    color: #293443; 
     background-color: #c9d5e1;
 }
 
