@@ -2,7 +2,7 @@
 
 <!-- Author : Gina Philipose
 HTML File : index.html
-Last Update : November 20th, 2024aHHHHHHHHHHHHHHHHHH -->
+Last Update : November 20th, 2024 -->
 
 <html lang="en">
 <head>
@@ -11,47 +11,45 @@ Last Update : November 20th, 2024aHHHHHHHHHHHHHHHHHH -->
     <title>Movie Database</title>
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
-<body> <!-- -->
+<body>
     <div class="header">
         <img src="logo.jpg" width="110" height="100">
         <div class="buttons">
-        <a href="https://css1.seattleu.edu/~gphilipose/template.html"><button><h3>Template</h3></button></a>
-        <a href="signUp.html"><button><h3>Sign Up</h3></button></a>
-        <a href="index.html"><button><h3>Movies</h3></button></a>
-        <a href="login.html"><button><h3>Login</h3></button></a>
+          <a href="index.html"><button><h3>Movies</h3></button></a>
+          <a href="https://css1.seattleu.edu/~gphilipose/template.html"><button><h3>Template</h3></button></a>        
+          <a href="signUp.html"><button><h3>Sign Up</h3></button></a>
+          <a href="login.html"><button><h3>Login</h3></button></a>
         </div>
 
-        <form action="search.html">
-          <label for="fname"><b>Search Movies:&nbsp;</b></label>
-          <input type="text" id="fname" name="fname"> <br> <br>
-        </form>
+        <!-- <form action="i.html"> -->
+          <label for="mname"><b>Search Movies:&nbsp;</b></label>
+          <input type="text" id="mname" name="mname"> <br> <br>
+          <div class="buttons">
+          <button class="search" id="searchButton"><h3>Search</h3></button>
+        </div>
+        <!-- </form> -->
     </div> 
     <br>
 
-
-    <!-- idea: when movie is clicked on, save a json object in local storage and use it 
-    after navigating to the display movie html page to fill in the contents (so we don't
-    need a new html for each movie entry - have review feature on that page) -->
-
     <div class="genre">
         <h3>Genres:</h3>
-        <button id="drama"><h3>Drama</h3></button>
-        <button id="action"><h3>Action</h3></button>
-        <button id="comedy"><h3>Comedy</h3></button>
-        <button id="thriller"><h3>Thriller</h3></button>
-        <button id="horror"><h3>Horror</h3></button>
-        <button id="fantasy"><h3>Fantasy</h3></button>
-        <button id="dystopian"><h3>Dystopian</h3></button>
-        <button id="romance"><h3>Romance</h3></button>
-        <button id="documentary"><h3>Documentary</h3></button>
-        <button id="adventure"><h3>Adventure</h3></button>
-
+        <button class = "genre" id="all"><h3>All</h3></button>
+        <button class = "genre" id="drama"><h3>Drama</h3></button>
+        <button class = "genre" id="action"><h3>Action</h3></button>
+        <button class = "genre" id="comedy"><h3>Comedy</h3></button>
+        <button class = "genre" id="thriller"><h3>Thriller</h3></button>
+        <button class = "genre" id="horror"><h3>Horror</h3></button>
+        <button class = "genre" id="fantasy"><h3>Fantasy</h3></button>
+        <button class = "genre" id="dystopian"><h3>Dystopian</h3></button>
+        <button class = "genre" id="romance"><h3>Romance</h3></button>
+        <button class = "genre" id="documentary"><h3>Documentary</h3></button>
+        <button class = "genre" id="adventure"><h3>Adventure</h3></button>
     </div>
 
     <br>
 
-    <div class="movies">
-<!-- 
+ <!--   <div class="movies">
+ 
       <div class="carousel">
         <div class="carousel-container">
           <div class="carousel-item">
@@ -86,26 +84,37 @@ Last Update : November 20th, 2024aHHHHHHHHHHHHHHHHHH -->
           </div>
         </div>
         <button class="carousel-button prev" id="prevBtn">&#8249;</button>
-        <button class="carousel-button next" id="nextBtn">&#8250;</button> -->
-      </div>
+        <button class="carousel-button next" id="nextBtn">&#8250;</button> 
+      </div>-->
 
-    <div>
-    
+    <div class="movies">
+        <!-- <a href="movie.html"><button class="movie" data-genre="drama"><img src="1.jpg" width="150" height="200"></button></a>
+        <a href="movie.html"><button class="movie" data-genre="action"><img src="2.jpg" width="150" height="200"></button></a>
+        <a href="movie.html"><button class="movie" data-genre="comedy"><img src="3.jpg" width="150" height="200"></button></a>
+        <a href="movie.html"><button class="movie" data-genre="thriller"><img src="4.jpg" width="150" height="200"></button></a>
+        <a href="movie.html"><button class="movie" data-genre="horror"><img src="5.jpg" width="150" height="200"></button></a>
+        <a href="movie.html"><button class="movie" data-genre="fantasy"><img src="6.jpg" width="150" height="200"></button></a>
+        <a href="movie.html"><button class="movie" data-genre="dystopian"><img src="7.jpg" width="150" height="200"></button></a>
+        <a href="movie.html"><button class="movie" data-genre="romance"><img src="8.jpg" width="150" height="200"></button></a>
+        <a href="movie.html"><button class="movie" data-genre="documentary"><img src="9.jpg" width="150" height="200"></button></a>
+        <a href="movie.html"><button class="movie" data-genre="adventure"><img src="10.jpg" width="150" height="200"></button></a> -->
+        <button class="movie" id="1" data-genre="drama" data-title="joker"><img src="1.jpg" width="150" height="200"></button>
+        <button class="movie" id="2" data-genre="action" data-title="rouge one: a star wars story"><img src="2.jpg" width="150" height="200"></button>
+        <button class="movie" id="3" data-genre="comedy" data-title="nightcrawler"><img src="3.jpg" width="150" height="200"></button>
+        <button class="movie" id="4" data-genre="thriller" data-title="ferris bueller's day off"><img src="4.jpg" width="150" height="200"></button>
+        <button class="movie" id="5" data-genre="horror" data-title="21 jump street"><img src="5.jpg" width="150" height="200"></button>
+        <button class="movie" id="6" data-genre="fantasy" data-title="elf"><img src="6.jpg" width="150" height="200"></button>
+        <button class="movie" id="7" data-genre="dystopian" data-title="mcfarland, usa"><img src="7.jpg" width="150" height="200"></button>
+        <button class="movie" id="8" data-genre="romance" data-title="corpse bride"><img src="8.jpg" width="150" height="200"></button>
+        <button class="movie" id="9" data-genre="documentary" data-title="twilight"><img src="9.jpg" width="150" height="200"></button>
+        <button class="movie" id="10" data-genre="adventure" data-title="john wick"><img src="10.jpg" width="150" height="200"></button>
 
-
-      <br>
-      <br>
-      
-      // put movies here
-      <br>
-        <a href="review.html"><button><h3>Example movie button</h3></button></a>
         <br> 
-        - maybe use carousel motion here with the movie pics
-        <br>
-        - each movie button is the movie cover
+        <!-- - maybe use carousel motion here with the movie pics -->
+
 
     </div>
-    - sign in stores user stuff into the user table (add a password attribute to check for login)
+    <!-- - sign in stores user stuff into the user table (add a password attribute to check for login)
     <br>
     - login will lead to a login page which checks with the user table to see if the user exits
     and if the password matches with the user - give corresponding error messages
@@ -126,10 +135,13 @@ Last Update : November 20th, 2024aHHHHHHHHHHHHHHHHHH -->
     (especially for userID - whenever a user account is created)
     <br>
     - do we need to use locking for this project?
-      - lock when user account is being added to user
+      - lock when user account is being added to user -->
 
 
-
+    <!-- idea: when movie is clicked on, save a json object in local storage and use it 
+    after navigating to the display movie html page to fill in the contents (so we don't
+    need a new html for each movie entry - have review feature on that page)
+ -->
 
 
     <script src="script.js"></script>
