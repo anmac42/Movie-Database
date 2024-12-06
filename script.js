@@ -127,6 +127,7 @@ const search = document.getElementById("mname");
 const searchButton = document.getElementById("searchButton");
 // Search bar
 searchButton.addEventListener('click', function() {
+  window.location.href = "index.html";
   const lowercaseSearch = search.value.toLowerCase();
   for(let i = 0; i<movies.length; i++) {
     if(movies[i].dataset.title.includes(lowercaseSearch)) {
