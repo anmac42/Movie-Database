@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" type="text/css" href="userinterface.css">
+</head>
+<body>
+    <div class="header">
+        <img src="logo.jpg" width="110" height="100" alt="Site Logo">
+        <div class="buttons">
+        <a href="https://css1.seattleu.edu/~gphilipose/template.html"><button><h3>Template</h3></button></a>
+        <a href="signUp.html"><button><h3>Sign Up</h3></button></a>
+        <a href="index.html"><button><h3>Movies</h3></button></a>
+        <a href="login.html"><button><h3>Login</h3></button></a>
+        </div>
+    </div>
+    
+    <div class="profile-container">
+        <h1>User Profile</h1>
+        
+        <div class="user-info">
+            <img src="profilepicture.jpg" alt="Profile Picture" class="profile-pic">
+            <p><b>Username:</b> <span id="username">[User's Name]</span></p>
+            <p><b>Email:</b> <span id="email">[User's Email]</span></p>
+            <button id="edit-profile">Edit Profile</button>
+        </div>
+        
+        <div class="user-reviews">
+            <h2>Your Reviews</h2>
+            <div id="reviews-list">
+
+                <p>No reviews yet.</p>
+            </div>
+        </div>
+        
+        <div class="favorite-movies">
+            <h2>Favorite Movies</h2>
+            <div id="favorites-list">
+
+                <p>No favorite movies yet.</p>
+            </div>
+        </div>
+        
+        <div class="recommendations">
+            <h2>Recommended Movies</h2>
+            <div id="recommendations-list">
+
+                <p>No recommendations yet.</p>
+            </div>
+        </div>
+    </div>
+    
+    <script src="profile.js"></script>
+</body>
+</html>
