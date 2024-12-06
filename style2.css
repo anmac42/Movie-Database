@@ -3,9 +3,6 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-
-
-
 .header, .header b, .header form, .header label {
     background-color: #293443;
     color: #c9d5e1;
@@ -17,8 +14,7 @@
 
 }
 
-
-.header input, label {
+.header form {
     margin-top: 16px;
     margin-left: 10px;
     justify-content: flex-end;
@@ -28,16 +24,6 @@
     height: 15px;
 }
 
-.buttons .search {
-    border: 1px solid #c9d5e1;
-    margin-top: 12px;
-    margin-left: 10px;
-    h3 {
-        margin-top: 3px;
-        margin-bottom: 3px;
-    }
-
-}
 
 
 .buttons {
@@ -54,35 +40,52 @@
 }
 
 
-
-
-
-.genre, .movies {
-    border: 1px solid #293443;
+.movieDatabase{
+	color: #111929;
     padding: 10px;
+
+}
+
+
+
+
+.movieDatabase {
+    border: 1px solid #293443;
+
     h3 button b{
         color: #111929;
 
     }
-    h3 {
-        color: #111929;
+    h3 input{
+        color: #c1c3c5;
         display: inline-flex;
     }
-    button {
-        border-bottom: 1px solid #c9d5e1;
-        border-top: 0px;
-        border-left: 0px;
-        border-right: 0px;
+    button input{
+	background-color: #293443;
+    	margin: 0px;
+	border: 0px;
+    	button, h3{
+        color: #c9d5e1;
     }
-    button:hover {
+
+
+    }
+    button input:hover {
         opacity: 0.4;
+    }
+    form {
+	display: flex;
+    }
+    button {
+    border: 0px;
+    margin-top: -13px;
+    margin-bottom: -13px;
     }
 }
 
 
 
 .sign h3, .sign form, .sign input{ 
-    color: #293443; 
     border: 1px solid #293443;
     padding: 10px;
     color: #c9d5e1;
@@ -106,13 +109,7 @@
 }
 
 .sign input {
-    color: #293443; 
     background-color: #c9d5e1;
 }
 
-  
 
-.movies button {
-    border: 0;
-    padding: 10px;
-}

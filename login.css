@@ -2,7 +2,7 @@
 {
     font-family: Arial, Helvetica, sans-serif; 
 }
- 
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -14,12 +14,14 @@ body {
 }
 
 .header {
+
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: #293443;
     padding: 10px 20px;
     color: #c9d5e1;
+
     width: 100%; 
     box-sizing: border-box;
     position: fixed;
@@ -37,8 +39,10 @@ body {
 
 .buttons {
     display: flex;
+
     gap: 10px;
 }
+
 
 .button-link, .buttons a {
     display: inline-block;
@@ -53,6 +57,7 @@ body {
 }
 
 .button-link:hover, .buttons a:hover {
+
     opacity: 0.8;
 }
 
@@ -60,8 +65,10 @@ body {
     margin-left: auto;
     display: flex;
     align-items: center;
+
     gap: 10px;
 }
+
 
 .header input {
     padding: 5px;
@@ -73,6 +80,7 @@ body {
 
 .login-container {
     color: #293443; 
+
     background: white;
     padding: 20px;
     border-radius: 8px;
@@ -135,38 +143,77 @@ body {
     text-decoration: underline;
 }
 
-@media (max-width: 768px) {
-    .header {
-        flex-wrap: wrap;
-        text-align: center;
-    }
-
-    .header img {
-        height: 80px;
-    }
-
-    .buttons {
-        flex-direction: column;
-        gap: 5px;
-    }
-
     .login-container {
-        width: 90%; 
+
+        width: 90%; *//* Adjusts form width for smaller screens */
+    /*}
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header, .header b, .header form, .header label {
+    background-color: #293443;
+    color: #c9d5e1;
+    display: flex;
+    margin-bottom: 0px;
+    input {
+        background-color: #c9d5e1;
     }
-    input, textarea {
-    color: #293443; 
-    background-color: #ffffff; 
-    border: 1px solid #ccc; 
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 4px;
-    box-sizing: border-box;
+
+}
+.header {
+    margin: 8px;
 }
 
 
-    .sign form input {
-    color: #293443; 
-    background-color: #ffffff; 
+.header input, label {
+    margin-top: 16px;
+    margin-left: 10px;
+    justify-content: flex-end;
 }
 
+.header input {
+    height: 15px;
+}
+
+.buttons .search {
+    border: 1px solid #c9d5e1;
+    margin-top: 12px;
+    margin-left: 10px;
+    h3 {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+}
+
+
+.buttons {
+    background-color: #293443;
+    margin-bottom: 0px;
+    button, h3{
+        background-color: #293443;
+        color: #c9d5e1;
+        border: 0px;
+    }
+    button:hover h3{
+        opacity: 0.4;
+    }
 }
