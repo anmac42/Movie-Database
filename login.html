@@ -1,147 +1,37 @@
-*
-{
-    font-family: Arial, Helvetica, sans-serif; 
-}
- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+</head>
+<body>
+    <div class="header">
+        <img src="logo.jpg" width="110" height="100">
+        <div class="buttons">
+          <a href="index.html"><button><h3>Movies</h3></button></a>
+          <a href="https://css1.seattleu.edu/~gphilipose/template.html"><button><h3>Template</h3></button></a>        
+          <a href="signUp.html"><button><h3>Sign Up</h3></button></a>
+          <a href="login.html"><button><h3>Login</h3></button></a>
+        </div>
+    </div> 
 
-/* General Styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    background-color: #505d6f; /* Matches your theme */
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensures body fills the viewport */
-    box-sizing: border-box; /* Prevents padding/margins from affecting layout */
-}
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="login-form">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
 
-/* Login Form Styles */
-.login-container {
-    background: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
-    text-align: center;
-    margin: 200px auto 20px auto; /* Increase margin-top to 140px for more space */
-    box-sizing: border-box;
-}
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-.login-container h1 {
-    margin-bottom: 20px;
-    color: #293443;
-}
-
-.login-container label {
-    display: block;
-    text-align: left;
-    margin-bottom: 5px;
-    color: #505d6f;
-}
-
-.login-container input {
-    width: 92%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    background-color: #f9f9f9;
-    color: #505d6f;
-}
-
-.login-container button {
-    width: 100%;
-    padding: 10px;
-    background: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-.login-container button:hover {
-    background: #0056b3;
-}
-
-.login-container p {
-    margin-top: 10px;
-    color: #505d6f;
-}
-
-.login-container p a {
-    color: #007BFF;
-    text-decoration: none;
-}
-
-.login-container p a:hover {
-    text-decoration: underline;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.header, .header b, .header form, .header label {
-    background-color: #293443;
-    color: #c9d5e1;
-    display: flex;
-    margin-bottom: 0px;
-    input {
-        background-color: #c9d5e1;
-    }
-
-}
-.header {
-    margin: 8px;
-}
-
-
-.header input, label {
-    margin-top: 16px;
-    margin-left: 10px;
-    justify-content: flex-end;
-}
-
-.header input {
-    height: 15px;
-}
-
-.buttons .search {
-    border: 1px solid #c9d5e1;
-    margin-top: 12px;
-    margin-left: 10px;
-    h3 {
-        margin-top: 3px;
-        margin-bottom: 3px;
-    }
-
-}
-
-
-.buttons {
-    background-color: #293443;
-    margin-bottom: 0px;
-    button, h3{
-        background-color: #293443;
-        color: #c9d5e1;
-        border: 0px;
-    }
-    button:hover h3{
-        opacity: 0.4;
-    }
-}
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="signUp.html">Sign Up</a></p>
+        <p id="error-message" style="color: red;"></p>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>
