@@ -12,71 +12,85 @@ Last Update : November 20th, 2024 -->
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-    <div class="header">
+ <div class="header">
         <img src="logo.jpg" width="110" height="100">
         <div class="buttons">
-        <a href="https://css1.seattleu.edu/~gphilipose/template.html"><button><h3>Template</h3></button></a>
-        <a href="signUp.html"><button><h3>Sign Up</h3></button></a>
-        <a href="index.html"><button><h3>Movies</h3></button></a>
-        <a href="login.html"><button><h3>Login</h3></button></a>
+          <a href="index.html"><button><h3>Movies</h3></button></a>
+          <a href="https://css1.seattleu.edu/~gphilipose/template.html"><button><h3>Template</h3></button></a>        
+          <a href="signUp.html"><button><h3>Sign Up</h3></button></a>
+          <a href="login.html"><button><h3>Login</h3></button></a>
+        </div>
+          <label for="mname"><b>Search Movies:&nbsp;</b></label>
+          <input type="text" id="mname" name="mname"> <br> <br>
+          <div class="buttons">
+          <button class="search" id="searchButton"><h3>Search</h3></button>
         </div>
     </div> 
-    <br>
+
+<!-- working below -->
+
+<form id = "movieForm" method="POST" >
+<!-- //action="movie.html"> -->
+  <input name="query" type="text" id="movieInput" hidden>
+  <button type="submit" id="movieSubmit" hidden></button>
+</form>
+
+<!-- working above -->
+ <br>
 
 
-    <!-- idea: when movie is clicked on, save a json object in local storage and use it 
-    after navigating to the display movie html page to fill in the contents (so we don't
-    need a new html for each movie entry - have review feature on that page) -->
+
 
     <div class="genre">
-        <h3>Genres:</h3>
-        // add genre buttons here and put them on the same line with flexbox
-           /////////////////////////
-
-            <br>
-            <img src="logo.jpg" width="110" height="100">
-
+        This will be where the movie cover goes
     </div>
 
     <br>
 
     <div class="movies">
-      // put movies here
-      <br>
-        <a href="review.html"><button><h3>Example movie button</h3></button></a>
-        <br> 
-        - maybe use carousel motion here with the movie pics
-        <br>
-        - each movie button is the movie cover
+      This will be where the movie synopsis is
 
     </div>
-    - sign in stores user stuff into the user table (add a password attribute to check for login)
-    <br>
-    - login will lead to a login page which checks with the user table to see if the user exits
-    and if the password matches with the user - give corresponding error messages
-    <br>
-    - after logging in, store the userID in local storage so the user is allowed to make reviews 
-    under their corresponding name
-    <br>
-    - block review making if the user is not logged in (userID in local storage is empty or NULL)
-    <br>
-    - maybe when logged in, add a recommended movies carousel at top with movies of similar genres
-    to what the user had recently reviewed (user review table to check this)
-    <br>
-    - when logged in, an already reviewed movies carousel
-    <br>
-    - when logged in, an not-yet reviewed movies carousel
-    <br> 
-    - Possibly change all the ID's to auto increment whenever we add it
-    (especially for userID - whenever a user account is created)
-    <br>
-    - do we need to use locking for this project?
-      - lock when user account is being added to user
+<br>
+    <div class="movies">
+      Release date
 
+    </div>
+    <br>
+    <div class="movies">
+      maturity
 
+    </div>
+    <br>
+    <div class="movies">
+      duration
 
+    </div>
+    <br>
+    <div class="movies">
+      language
+
+    </div>
+    <br>
+    <div class="movies">
+      awards
+
+    </div>
+
+    <br>
+    <div class="movies">
+      director
+
+    </div>
+
+    <br>
+    <div class="movies">
+      roles/actor/role descriptions
+
+    </div>
 
 
     <script src="script.js"></script>
+    <script src="movie.js"></script>
 </body>
 </html>
